@@ -13,3 +13,7 @@ __pycache__/
 # OS / editor junk
 .DS_Store
 .vscode/
+
+# Personal voice recordings for the ASR test (each teammate records their own)
+asr_test/recordings/*
+!asr_test/recordings/.gitkeep

@@ -283,7 +283,7 @@ def _run(llm, prompt, schema, inputs: dict):
 
 def _format_history(history: list[dict], max_messages: int = 16) -> str:
     """Turns the stored conversation (a list of dicts) into plain text for the
-    prompt, e.g. 'Student: ...' / 'PyNative: ...'. Only the most recent
+    prompt, e.g. 'Student: ...' / 'Tracy: ...'. Only the most recent
     `max_messages` lines are used so a long session never overflows the model."""
     lines = []
     for m in history[-max_messages:]:

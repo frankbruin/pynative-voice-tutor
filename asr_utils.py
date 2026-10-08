@@ -1,7 +1,7 @@
 """
 asr_utils.py
 ------------
-Turns recorded audio (from the browser mic recorder) into text, using
+Turns recorded audio (from Streamlit's st.audio_input microphone widget) into text, using
 faster-whisper - runs 100% locally, free, no API key.
 
 Important note on audio format: we do NOT assume the recorder sends plain
@@ -66,7 +66,7 @@ def _decode_to_numpy_16k(audio_bytes: bytes) -> np.ndarray:
 
 
 def transcribe_wav_bytes(audio_bytes: bytes) -> str:
-    """Takes the raw audio bytes returned by streamlit-mic-recorder and
+    """Takes the raw audio bytes returned by st.audio_input and
     returns the transcribed text. Returns "" on any failure instead of
     raising, so a bad recording never crashes the app - but prints the
     FULL error traceback to the terminal, so the real cause is always
@@ -78,7 +78,14 @@ def transcribe_wav_bytes(audio_bytes: bytes) -> str:
         if audio_array.size == 0:
             return ""
         model = get_whisper_model()
-        segments, _info = model.transcribe(audio_array, language=config.WHISPER_LANGUAGE, beam_size=1)
+        # initial_prompt = vocabulary hint with Python terms (see config.ASR_PROMPT).
+        prompt = config.ASR_PROMPT if config.USE_ASR_PROMPT else None
+        segments, _info = model.transcribe(
+            audio_array,
+            language=config.WHISPER_LANGUAGE,
+            beam_size=1,
+            initial_prompt=prompt,
+        )
         return " ".join(segment.text for segment in segments).strip()
     except Exception:
         print("[ASR ERROR] Full traceback below - copy this if you need help diagnosing it:")

@@ -1,6 +1,6 @@
 # --- UI ---
-streamlit>=1.38
-streamlit-mic-recorder>=0.0.5
+# 1.40+ is needed for the built-in microphone widget st.audio_input
+streamlit>=1.40
 
 # --- ASR: local, free, offline speech-to-text ---
 # faster-whisper installs its own dependencies; av + numpy are imported

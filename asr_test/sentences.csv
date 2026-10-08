@@ -1,0 +1,13 @@
+file,expected
+01,A tuple is immutable but a list is mutable.
+02,You use elif to check another condition after an if statement.
+03,A dictionary stores key value pairs and you can get a value with its key.
+04,A lambda is a small anonymous function.
+05,The init method runs when you create an object from a class.
+06,With args and kwargs a function can take a number of arguments.
+07,A list comprehension builds a new list in a single line.
+08,A set only keeps unique values.
+09,Slicing a string with a colon gives you a part of the string.
+10,A for loop with range repeats the code a fixed number of times.
+11,You catch an error with try and except.
+12,An f-string lets you put a variable inside a string.

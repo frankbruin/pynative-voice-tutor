@@ -1,0 +1,13 @@
+file,expected,without_prompt,wer_without,with_prompt,wer_with
+01.m4a,A tuple is immutable but a list is mutable.,"A topple is immutable, but a list is mutable.",0.111,"A tuple is immutable, but a list is mutable.",0.0
+02.m4a,You use elif to check another condition after an if statement.,You use LF to check another condition after an IF statement.,0.091,You use elif to check another condition after an if statement.,0.0
+03.m4a,A dictionary stores key value pairs and you can get a value with its key.,Addictionary stores key value pairs and you can get a value with its key.,0.133,Addictionary stores key value pairs and you can get a value with its key.,0.133
+04.m4a,A lambda is a small anonymous function.,A lambda is a small anonymous function.,0.0,"A lambda is a small, anonymous function.",0.0
+05.m4a,The init method runs when you create a new object from a class.,The init method runs when you create an object from a class.,0.154,The init method runs when you create an object from a class.,0.154
+06.m4a,With args and kwargs a function can take any number of arguments.,With args and quarks a function can take a number of arguments.,0.167,With args and kwargs a function can take a number of arguments.,0.083
+07.m4a,A list comprehension builds a new list in a single line.,A list comprehension builds a new list in a single line.,0.0,A list comprehension builds a new list in a single line.,0.0
+08.m4a,A set only keeps unique values.,A set only keeps unique values.,0.0,A set only keeps unique values.,0.0
+09.m4a,Slicing a string with a colon gives you part of the string.,Slicing a string with a colon gives you a part of the string.,0.083,Slicing a string with a colon gives you a part of the string.,0.083
+10.m4a,A for loop with range repeats the code a fixed number of times.,A for loop would range repeats the code a fixed number of times.,0.077,A for loop would range repeats the code a fixed number of times.,0.077
+11.m4a,You catch an error with try and except.,You catch an error with try and accept.,0.125,You catch an error with try and accept.,0.125
+12.m4a,An f-string lets you put a variable inside a string.,an F string that you put variable inside string,0.5,An f-string lets you put variable inside string.,0.2
